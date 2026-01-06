@@ -1,4 +1,4 @@
-# Kostas - Developer Portfolio
+# My Portfolio
 
 A modern, responsive portfolio website showcasing my projects and GitHub statistics.
 
@@ -92,8 +92,8 @@ portfolio/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Just-Me-22/portfolio.git
-cd portfolio
+git clone https://github.com/Just-Me-22/My-Portfolio.git
+cd My-Portfolio
 ```
 
 2. Open `index.html` in your browser or serve locally:
@@ -143,9 +143,9 @@ const featuredNames = [
 
 ### GitHub Pages (Recommended)
 
-1. Create a repository named `Just-Me-22.github.io`
-2. Push this portfolio to that repository
-3. Access your portfolio at `https://Just-Me-22.github.io`
+1. Push this portfolio to the repository
+2. Enable GitHub Pages in repository settings
+3. Access your portfolio at `https://just-me-22.github.io/My-Portfolio/`
 
 ### Custom Domain
 
@@ -221,4 +221,4 @@ GitHub: [Just-Me-22](https://github.com/Just-Me-22)
 
 ---
 
-Built with ❤️ using HTML, CSS, and JavaScript
+Built with HTML, CSS, and JavaScript
