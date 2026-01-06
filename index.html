@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of a full-stack developer showcasing projects and GitHub statistics">
+    <meta name="keywords" content="portfolio, developer, GitHub, projects, web development">
+    <meta name="author" content="Kostas">
+    <meta property="og:title" content="Kostas - Developer Portfolio">
+    <meta property="og:description" content="Showcasing my projects and GitHub contributions">
+    <meta property="og:type" content="website">
+
+    <title>Kostas - Developer Portfolio</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Kostas</div>
+            <div class="nav-menu">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#github-stats" class="nav-link">GitHub</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Hi, I'm <span class="accent">Kostas</span></h1>
+            <p class="hero-subtitle">Full-stack Developer | Open Source Contributor | Tech Enthusiast</p>
+            <p class="hero-description">Building beautiful applications and contributing to the open-source community</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                <a href="https://github.com/Just-Me-22" class="btn btn-secondary" target="_blank">View GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate developer with a keen interest in building robust, scalable applications. My experience spans full-stack development, desktop applications, and open-source contributions.</p>
+                    <p>I enjoy working with modern technologies and am always eager to learn new tools and frameworks. When I'm not coding, you can find me exploring new projects and contributing to the open-source community.</p>
+                </div>
+                <div class="skills">
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Vue.js</span>
+                            <span class="skill-tag">Nuxt.js</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Rust</span>
+                            <span class="skill-tag">TypeScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools & Platforms</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">Tauri</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Raycast</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Statistics Section -->
+    <section id="github-stats" class="github-stats">
+        <div class="container">
+            <h2 class="section-title">GitHub Statistics</h2>
+
+            <!-- Loading State -->
+            <div class="loading" id="statsLoading">Loading GitHub data...</div>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid" id="statsGrid" style="display: none;">
+                <div class="stat-card">
+                    <div class="stat-value" id="reposCount">0</div>
+                    <div class="stat-label">Public Repositories</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="starsCount">0</div>
+                    <div class="stat-label">Total Stars</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="followersCount">0</div>
+                    <div class="stat-label">Followers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="contributionsCount">0</div>
+                    <div class="stat-label">Contributions</div>
+                </div>
+            </div>
+
+            <!-- Languages Section -->
+            <div class="languages-section">
+                <h3>Language Breakdown</h3>
+                <div class="languages-container">
+                    <div class="chart-container" id="languageChart"></div>
+                    <div class="languages-list" id="languagesList"></div>
+                </div>
+            </div>
+
+            <!-- Featured Repositories -->
+            <div class="featured-repos">
+                <h3>Featured Repositories</h3>
+                <div class="repos-grid" id="reposGrid"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+
+                <!-- Helium Browser Controller -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Helium Browser Controller</h3>
+                        <div class="project-tags">
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Raycast</span>
+                        </div>
+                    </div>
+                    <p class="project-description">A powerful Raycast extension for controlling Helium Browser on Windows. Automate browser interactions, manage tabs, and streamline your workflow.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Just-Me-22/Helium-Browser-Controller-Windows-" target="_blank" class="project-link">View on GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Seelen-UI Contribution -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Seelen-UI</h3>
+                        <div class="project-tags">
+                            <span class="tag">Rust</span>
+                            <span class="tag">Tauri</span>
+                            <span class="tag">Desktop</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Contributing to Seelen-UI, a fully customizable desktop environment for Windows. Working on icon caching and system integration features.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Just-Me-22/Seelen-UI" target="_blank" class="project-link">View on GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Weather Applications -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Weather Applications</h3>
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Nuxt.js</span>
+                            <span class="tag">Web</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Weather applications featuring real-time weather data, forecasts, and a premium subscription model with Nuxt 3, Supabase, and Paddle integration.</p>
+                    <div class="project-links">
+                        <a href="#contact" class="project-link">Learn More</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Feel free to reach out to me for collaborations or just a friendly hello</p>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <span class="label">Email:</span>
+                        <a href="mailto:kkosik8@proton.me">kkosik8@proton.me</a>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">GitHub:</span>
+                        <a href="https://github.com/Just-Me-22" target="_blank">github.com/Just-Me-22</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/Just-Me-22" target="_blank" class="social-link" title="GitHub">GitHub</a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <p class="form-note">Or send an email directly to kkosik8@proton.me</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Kostas. Built with HTML, CSS, and JavaScript. Hosted on GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/github-api.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
