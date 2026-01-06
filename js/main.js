@@ -241,6 +241,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Setup scroll animations
     setupScrollAnimations();
+
+    // Setup mouse tracking glow effect for hero name
+    setupMouseTrackingGlow();
 });
 
 function addAnimationClasses() {
@@ -263,6 +266,37 @@ function setupScrollAnimations() {
     // Observe all scroll-animate elements
     document.querySelectorAll('.scroll-animate').forEach(el => {
         observer.observe(el);
+    });
+}
+
+// ==================== Mouse Tracking Glow Effect ====================
+
+function setupMouseTrackingGlow() {
+    const accentElement = document.querySelector('.accent');
+    if (!accentElement) return;
+
+    document.addEventListener('mousemove', (e) => {
+        const rect = accentElement.getBoundingClientRect();
+        const elementCenterX = rect.left + rect.width / 2;
+        const elementCenterY = rect.top + rect.height / 2;
+
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+
+        // Calculate distance from mouse to element
+        const distance = Math.sqrt(
+            Math.pow(mouseX - elementCenterX, 2) + Math.pow(mouseY - elementCenterY, 2)
+        );
+
+        // Calculate glow intensity based on distance (max effect within 300px)
+        const maxDistance = 300;
+        const intensity = Math.max(0, 1 - distance / maxDistance);
+
+        // Update glow effect
+        const baseGlow = 'rgba(59, 130, 246, 0.3), 0 0 40px rgba(139, 92, 246, 0.2)';
+        const enhancedGlow = `rgba(59, 130, 246, ${0.3 + intensity * 0.4}), 0 0 ${20 + intensity * 30}px rgba(139, 92, 246, ${0.2 + intensity * 0.4})`;
+
+        accentElement.style.textShadow = `0 0 ${20 + intensity * 30}px ${enhancedGlow}`;
     });
 }
 
